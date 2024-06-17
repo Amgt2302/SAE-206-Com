@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="quizCSS.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/png" href="../images/icon.png">
+    <title>Quiz : GEA</title>
+</head>
+<body id="particles">
+    <div class="overlay"></div>
+    <div><img src="../images/gea_1.jpg" alt="personnage" class="personnage"></div>
+    <section class="Quiz">
+        <h1 class="questionscr"></h1>
+        <div class="box">
+            <button class="Qgea" id="r1"><h2></h2></button>
+            <button class="Qgea" id="r2"><h2></h2></button>
+            </div>
+        <div class="box">
+            <button class="Qgea" id="r3"><h2></h2></button>
+            <button class="Qgea" id="r4"><h2></h2></button>
+        </div>
+    </section>
+
+    <section class="modalTrue">
+        <div>
+            <i class='bx bx-check-circle'></i>
+            <h2 class="title">Bonne Reponse !</h2>
+            <button class="suiteT" onclick="situer((boucle = boucle + 1), gea_question)"></button>
+        </div>
+    </section>
+
+    <section class="modalFalse">
+        <div>
+            <i class='bx bxs-x-circle'></i>        
+            <h2 class="title">Mauvaise Reponse !</h2>
+            <div class="repAttendus"></div>
+            <button class="suiteF" onclick="situer((boucle = boucle + 1), gea_question)"></button>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="particles.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
