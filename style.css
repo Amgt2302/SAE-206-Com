@@ -1,0 +1,1065 @@
+
+
+/*
+
+column-count: 3;
+  column-gap: 40px;
+  column-rule-style: solid;
+  column-rule-width: 1px;
+  column-rule-color: lightblue;
+
+*/
+
+
+#Info .titre{
+    font-family: 'Courier New', monospace;
+}
+
+#Mt2e .boite{
+	background: ; 
+	box-shadow: 20px 20px 5px rgb(153,56,50);
+	 transition: 1s;
+	background:linear-gradient(to bottom right, rgb(196,107,103), #AA4141);	 
+	
+}
+
+#Mt2e .boite2{
+	background: ; 
+	box-shadow: 20px 20px 5px rgb(153,56,50);
+	 transition: 1s;
+	background:linear-gradient(to bottom right, rgb(196,107,103), #AA4141);	 
+	
+}
+
+
+#Mt2e .fond{
+	box-shadow: 20px 20px 5px rgb(153,56,50);
+	 transition: 1s;
+}
+
+.fond{
+	
+	 box-shadow: 20px 20px 5px lightblue;
+	 transition: 1s;
+}
+
+.fond:hover{
+	box-shadow: 30px 30px 5px lightblue;
+	 transition: 1s;
+}
+
+
+#Bio .boite{
+	background: ; 
+	box-shadow: 20px 20px 5px rgb(107,153,106);
+	 transition: 1s;
+	background:linear-gradient(to bottom right, rgb(160,201,157), #408161);	
+}
+
+
+#Bio .boite2{
+	background: ; 
+	box-shadow: 20px 20px 5px rgb(107,153,106);
+	transition: 1s;
+	background:linear-gradient(to bottom right, rgb(160,201,157), #408161);	
+}
+
+#Gea .titre{
+    font-family: 'Brush Script MT', cursive;
+    font-size: 200%;
+}
+
+#Gea .boite{
+	background: ; 
+	box-shadow: 20px 20px 5px rgb(166,140,55);
+	 transition: 1s;
+	background:linear-gradient(to bottom right, rgb(216,190,113), #C8D68C);	
+}
+
+#Gea .boite2{
+	background: ; 
+	box-shadow: 20px 20px 5px rgb(166,140,55);
+	 transition: 1s;
+	background:linear-gradient(to bottom right, rgb(216,190,113), #C8D68C);	
+}
+
+* {
+  box-sizing: border-box;
+  
+  font-family: Century Gothic;
+}
+
+body {
+  margin: 0;
+  font-family: Garamond;
+  font-size: 20px;
+}
+
+nav{
+  top:0;
+  position: absolute;
+  width:100%;
+  z-index: 1000;
+  
+}
+nav ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#logo{
+	left: 0; 
+	transform: scale(0.6);
+	top:0;
+	height: 80px;
+	margin:0:
+	float: inline-start;
+	
+	
+	
+}
+
+#logo {
+            height: 80px;
+           display: flex;
+            align-items: center;
+            
+            /* margin-right: auto; */
+            margin-left: 20px;
+        }
+
+.paragraphe{
+	font-family: Garamond;
+  
+}
+
+#formations{
+	font-family: Garamond;
+  
+}
+
+/*
+#navbar{
+	display: flex;
+	
+}
+*/
+nav ul li{
+  
+  font-size: 15px;
+  word-spacing: 2px;
+  margin:  15px 15px;
+  border-right-style:solid ;
+  padding-right: 25px;
+  border-color: white;
+  border-width: 1px;
+  height: 25px;
+  float : right ; 
+
+
+}
+
+nav ul li a{
+    color: white;
+}
+
+nav ul li a:hover {
+    color: rgb(83,134,153);
+}
+
+#info:hover{
+	color: rgb(135,184,201);
+	
+}
+
+#mt2e:hover{
+	color: rgb(196,107,103);
+	
+}
+
+#gea:hover{
+	color: rgb(216,190,113);
+	
+}
+
+#bio:hover{
+	color: rgb(160,201,157);
+	
+}
+
+#nav_secondaire{
+ width:100%; 
+ top:0;
+ z-index: 100;
+ background-color: rgba(0, 0, 0, 0.7);
+ position: static;
+}
+
+
+#nav_secondaire ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#nav_secondaire li {
+  font-size: 15px;
+  word-spacing: 2px;
+  border-right-style:solid ;
+  padding-right: 25px;
+  border-color: black;
+  border-width: 1px;
+  
+}
+
+
+
+.en_bas{
+  display: block;
+  margin-top: 20%; /* A MODIFIER pour plus petits ecrans */
+}
+
+#myVideo {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  
+  
+}
+
+video{
+	
+  
+}
+
+/* Keyword value 
+clip: auto;
+
+/* <shape> values 
+clip: rect(1px, 10em, 3rem, 2ch);
+
+/* Global values 
+clip: inherit;
+clip: initial;
+clip: revert;
+clip: revert-layer;
+clip: unset;
+*/
+
+/*IMG EN FOND*/
+
+
+
+
+
+
+header {
+  height: 300px;
+  position: relative;
+  
+  background-size: cover; /* Ajuste la taille pour couvrir la totalité de l'élément */
+  background-position: center; /* Centre l'image */
+}
+
+header .titre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  width: 100%;
+  height: 100%; /* Utilise la taille complète de l'élément parent */
+}
+
+
+#img_header {
+  position: relative;
+  top: 150px;
+  width: 100%;
+  max-height: 400px; /* Par exemple, ajustez la hauteur maximale selon vos besoins */
+  object-fit: cover; /* Ajuste l'image pour couvrir la taille de la balise */
+}
+
+/*
+.container { attention au nom 
+  position: relative;
+  width: 50%;
+  max-width: 1000px;
+}
+*/
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute; 
+  top: 45%; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+nav{
+  background-color: #0a0a0a ;
+  position: fixed;
+  width:100%;
+  
+}
+nav ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li a{
+    color: white;
+}
+
+
+
+
+.content {
+  position: absolute;
+   z-index:1;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px;
+  text-align: top-center;
+
+}
+
+#myBtn {
+  width: 100px;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  font-size: 18px;
+  padding: 5px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+
+
+
+
+html{
+
+ /* background: linear-gradient( rgb(201,201,201) 20%, #333 80%, #333 20%, #30302f );*/
+	background: azure;
+}
+
+h1{
+color:  black;
+
+}
+
+.titre{
+
+  color: white;
+}
+
+
+.coteacote article img{
+  
+  width: 80%;
+  /*
+  border-style: solid;
+  border-color: grey;*/
+  border-radius: 10px;
+}
+
+.fond{
+	
+	 box-shadow: 20px 20px 5px lightblue;
+	 transition: 1s;
+}
+
+.fond:hover{
+	box-shadow: 30px 30px 5px lightblue;
+	 transition: 1s;
+}
+
+.boite{
+	box-shadow: 20px 20px 5px lightblue;
+	 transition: 1s;
+	background:linear-gradient(to bottom right, rgb(135,184,201), #6C8FB9);	
+}
+
+.boite2{
+	box-shadow: 20px 20px 5px lightblue;
+	 transition: 1s;
+	background:linear-gradient(to bottom right, rgb(135,184,201), #6C8FB9);
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.coteacote article{
+  width: 50%;
+}
+
+.coteacote{
+  display: flex;
+  margin-left: 5%;
+  margin-right: 5%;
+      
+}
+
+.coteacote p{
+	    float: left;
+	
+}
+
+
+.carre{
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 20s;
+}
+
+@keyframes example {
+  from {background-color: red;}
+  to {background-color: yellow;}
+}
+
+div , p{
+  text-align: center;
+  display: block; 
+}
+
+
+a, em , strong , span{
+  display: inline;  
+}
+
+
+a footer {
+  color: grey;
+  text-decoration: none;
+}
+
+hr{
+  color: white;
+  width: 50%;
+  margin : 7%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ul{
+  list-style-position: inside;
+  list-style-type: none;
+}
+
+
+
+
+table, th, td {
+  border:1px solid black;
+  border-collapse: collapse;
+  margin: auto;
+
+}
+
+table{
+  width: 50%;
+}
+
+p{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+
+/* nouveautes */
+h1{
+	font-size: 220%;
+}
+
+
+.txt_main p{
+  margin-left: 10%;
+  margin-right: 10%;
+  float: left;
+ 
+
+}
+
+.txt_main h2{
+	margin-top: 10%;
+}
+
+.txt_main p:hover{
+ 
+  
+  transition:  1s;
+
+}
+
+
+#bouton{
+	transition:  1s;
+	/*border: 1px solid rgb(135,184,201) ; 
+	box-shadow: inset  0px 0px 10px 2px  grey;*/
+	font-size:90% ; 
+	border-bottom-right-radius: 50px; 
+	border-top-left-radius: 50px; 
+	text-align: center center; 
+	padding: 20px;
+	background: linear-gradient(to bottom right, rgb(135,184,201) , #559fb5) ; 
+}
+
+#bouton:hover{
+	/*box-shadow: 60px -10px rgb(135,184,201); */
+	box-shadow: 50px -10px #aab0b3;
+	font-size:120% ; 
+   transition:  1s;
+ 
+}
+
+
+a{
+  color: black; 
+  text-decoration: none;
+ 
+}
+
+
+
+
+
+
+
+
+
+/*ARTICLES ENCADRES */
+
+article{
+  display: inline-block;
+  color:  black;
+}
+
+.cadre{
+  width: 20%;
+  border: 1px solid;
+  background-color:#8d8d8d;
+  border-radius: 20px;
+  display: inline-block;
+  margin: 20px;
+    box-shadow: 3px 3px 3px white;
+}
+
+.cadre img{
+
+  width:  100%;
+  border-radius: 20px 20px 0px 0px;
+}
+
+
+.cadre img:hover {
+  opacity: 0.5;
+}
+
+.cadre:hover {
+  border: 1px solid #777;
+
+}
+
+
+/*background-attachment: scroll;*/
+
+footer{
+  color: grey;
+}
+
+.txt_gris img{
+
+  border: 2px solid grey;
+  border-radius: 4px;
+}
+
+.txt_gris h3{
+
+   color: grey;
+}
+
+ul.debouches {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 3%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start; /* Alignement au même point de départ */
+   justify-content: flex-start; /* Alignement au même point de départ en largeur */
+}
+
+ul.debouches li {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+
+
+
+.agrandir{
+  transition:  1s;
+  /*border: 1px solid black ; 
+  padding : 8%;*/
+  background-color:gainsboro;
+  border-radius: 20px;
+  display: inline-block;
+  
+   box-shadow: 3px 3px 3px grey ;
+   margin: 20px;
+   
+
+  
+}
+
+.agrandir img{
+  width: 200px;
+  transition:  1s;
+  border: none;
+  border-radius: 0px; 
+  border-bottom-left-radius: 80%50px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+
+}
+
+.agrandir:hover{
+  font-size:130% ;
+
+}
+
+.agrandir img:hover{
+ 
+  
+  width: 250px;
+  transition:  1s;
+
+}
+
+
+#copyright{
+  text-align: center;
+}
+
+
+
+/* POUR TELEPHONE */
+@media screen and (max-width: 769px) {
+  
+    .coteacote {
+  display: block;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+  .coteacote p{
+    margin: 0;
+  }
+
+  }
+
+
+
+
+@media screen and (max-width: 769px) {
+
+  header{
+  height: 500px;
+  position: relative;
+  background-image: url("img/hondansx.jpg"); 
+  background-size: 100%;
+
+  background-position: top; /*sinon enlevere */
+  background-attachment: static; 
+  
+  
+}
+
+
+
+.content{
+  top: 300px;
+}
+
+ nav {
+        position: absolute;
+ }
+
+      nav ul {
+
+        flex-direction: column;
+        text-align: center;
+       
+      }
+	  
+      nav ul li {
+        margin: 10px 0;
+        border-right: none;
+        
+        height: auto;
+        width: 100%;
+
+      }
+
+      .nav_secondaire li{
+        border-right: none;
+      }
+
+      .nav_secondaire {
+        top: 300px;
+
+      }
+
+
+  h1{
+    font-size: 17px;
+
+  }
+
+  h2{
+    font-size: 15px;
+  }
+
+  .content nav li {
+    font-size: 10px;
+  }
+
+  p{
+    font-size: 11px;
+  }
+  
+
+  .cadre{
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    width: 40%;
+
+  }
+
+  .dropdown{
+    display: none;
+
+  }
+
+
+    .coteacote {
+
+  display: block;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-bottom: 0;
+  margin-top: 0;
+  }
+
+  .coteacote p{
+    margin: 0;
+  }
+
+  .coteacote article{
+  width: 100%;
+}
+
+  .coteacote article img {
+  width: 70%;
+
+}
+
+
+
+  
+
+}
+
+ .carte-iframe {
+      width: 100%; /* Largeur de la carte à 100% de la largeur du conteneur parent */
+      height: 50px; /* Hauteur fixe de la carte en pixels, ajustez selon vos besoins */
+      border: none; /* Supprime la bordure de l'iframe */
+    }
+
+/*                 FOOTER             */
+
+.footer-dark {
+  padding:50px 0;
+  color: black;
+  
+}
+
+.footer-dark h3 {
+  margin-top:0;
+  margin-bottom:12px;
+  font-weight:bold;
+  font-size:16px;
+  color: grey;
+}
+
+.footer-dark ul {
+  padding:0;
+  list-style:none;
+  line-height:1.6;
+  font-size:14px;
+  margin-bottom:0;
+}
+
+.footer-dark ul a {
+  color:inherit;
+  text-decoration:none;
+  
+}
+
+.footer-dark ul a:hover {
+  opacity:0.8;
+}
+
+@media (max-width:767px) {
+  .footer-dark .item:not(.social) {
+    text-align:center;
+    padding-bottom:20px;
+  }
+}
+
+.footer-dark .item.text {
+  margin-bottom:36px;
+}
+
+@media (max-width:767px) {
+  .footer-dark .item.text {
+    margin-bottom:0;
+  }
+
+   ul.debouches {
+    display: block;
+  }
+
+  ul.debouches li {
+    width: 100%;
+  }
+}
+
+.footer-dark .item.text p {
+  
+  margin-bottom:0;
+}
+
+.footer-dark .item.social {
+  text-align:center;
+}
+
+@media (max-width:991px) {
+  .footer-dark .item.social {
+    text-align:center;
+    margin-top:20px;
+  }
+}
+
+.footer-dark .item.social > a {
+  font-size:20px;
+  width:36px;
+  height:36px;
+  line-height:36px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  box-shadow:0 0 0 1px rgba(255,255,255,0.4);
+  margin:0 8px;
+  color:#fff;
+  opacity:0.75;
+}
+
+.footer-dark .item.social > a:hover {
+  opacity:0.9;
+}
+
+.footer-dark .copyright {
+  text-align:center;
+  padding-top:24px;
+  opacity:0.3;
+  font-size:13px;
+  margin-bottom:0;
+}
+
+
+.services{
+  display: inline-block;
+  margin: 5%;
+}
+
+.sur_nous{
+display: inline-block;
+margin: 5%;
+}
+
+.presentation{
+display: inline-block;
+width: 200px;
+margin: 5%;
+}
+
+
+.voiture{
+  display: flex;
+
+}
+
+.slideshow-container , #description{
+
+ flex: 1;
+
+}
+
+
+
+#description{
+ float: right;
+ margin-left: 0;
+ margin-top: 50px;
+
+}
+
+
+
+
+/*slideshow*/
+
+* {box-sizing: border-box}
+
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 700px;
+  position: relative;
+  margin: auto;
+ 
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+ .next:hover {
+  right: 0;
+  background-color: rgba(0,0,0,0.5);
+}
+
+ .prev:hover {
+  
+  background-color: rgba(0,0,0,0.5);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+
+}
+
+/*https://epicbootstrap.com/snippets/footer-dark*/
+

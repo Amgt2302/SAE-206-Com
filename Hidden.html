@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidden</title>
+</head>
+
+<body>
+
+    <style>
+        body {
+            background-color: rgba(0, 0, 0, 0.8);
+            overflow: hidden;
+        }
+    </style>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <script>
+        // search "\[°-°]/" to find tips in code
+
+        const canvas = document.getElementById("gameCanvas");
+        const ctx = canvas.getContext("2d");
+
+
+        // Set canvas size
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const enemies = [];
+        let score = 0;
+
+        const player = {
+            x: canvas.width / 2,
+            y: canvas.height - 30,
+            width: 40,
+            height: 20,
+            speed: 5,
+            angle: 0 //rotate player \[°-°]/
+        };
+
+        const bullets = [];
+        const bulletSpeed = 5; //change bullet speed 
+        const bulletWidth = 8;
+        const bulletHeight = 8;
+        const bulletOffsetX = 2;
+        const bulletOffsetY = -35;
+
+
+
+        function drawPlayer() {
+            ctx.save();
+            ctx.translate(player.x + player.width / 2, player.y + player.height / 2);
+            ctx.rotate(player.angle);
+            ctx.font = "30px Arial";
+            ctx.fillText("🛸", -player.width / 2, -player.height / 2);//change player \[°-°]/
+            ctx.restore();
+        }
+
+        function drawEnemies() {
+            ctx.fillStyle = "white";
+            enemies.forEach(enemy => {
+                ctx.fillText(enemy.character, enemy.x, enemy.y);
+            });
+        }
+
+        function drawBullets() {
+            ctx.fillStyle = "aqua"; //bullet color \[°-°]/
+            bullets.forEach(bullet => {
+                ctx.fillRect(bullet.x, bullet.y, bullet.width, bullet.height);
+            });
+        }
+
+        function drawScore() {
+            ctx.fillStyle = "white";
+            ctx.font = "24px Arial";
+            ctx.fillText("Score: " + score, 10, 30);
+        }
+
+        function moveEnemies() {
+            enemies.forEach(enemy => {
+                enemy.y += enemy.speed;
+            });
+        }
+
+        function generateEnemies() {
+            const characters = ["🛸", "🎈", "👽", "⭐", "🌑", "🌎", "🪐", "🌕", "🧻", "💩"]; //create enemy \[°-°]/🌌
+            const points = [5, 5, 5, 5, 10, 10, 10, 10, 999, -999];
+            const health = [1, 1, 1, 1, 5, 5, 5, 5, 15, 15];
+
+            const characterIndex = Math.floor(Math.random() * characters.length); //-1 a rain of undifined XD
+            const x = Math.random() * canvas.width;
+            const y = 0;
+            const speed = 3; //enemy speed \[°-°]/
+
+            enemies.push({
+                character: characters[characterIndex],
+                x: x,
+                y: y,
+                width: 30,
+                height: 40,
+                points: points[characterIndex],
+                health: health[characterIndex],
+                speed: speed
+            });
+        }
+
+        // Keyboard controls
+        const keys = {};
+        document.addEventListener("keydown", function (e) {
+            keys[e.key] = true;
+        });
+        document.addEventListener("keyup", function (e) {
+            if (e.key === " ") { // Space key in java XD
+                bullets.push({
+                    x: player.x + player.width / 2 - bulletWidth / 2 + bulletOffsetX,
+                    y: player.y + bulletOffsetY,
+                    width: bulletWidth,
+                    height: bulletHeight
+                });
+            }
+            delete keys[e.key];
+        });
+
+        function movePlayer() {
+            if (keys["ArrowLeft"] && player.x > 0) {
+                player.x -= player.speed;
+            }
+            if (keys["ArrowRight"] && player.x < canvas.width - player.width) {
+                player.x += player.speed;
+            }
+        }
+
+        function moveBullets() {
+            bullets.forEach(bullet => {
+                bullet.y -= bulletSpeed;
+            });
+            bullets.forEach((bullet, bulletIndex) => {
+                if (bullet.y + bullet.height < 0) {
+                    bullets.splice(bulletIndex, 1);
+                } else {
+                    // Check collision 
+                    enemies.forEach((enemy, enemyIndex) => {
+                        if (
+                            bullet.x < enemy.x + enemy.width &&
+                            bullet.x + bullet.width > enemy.x &&
+                            bullet.y < enemy.y + enemy.height &&
+                            bullet.y + bullet.height > enemy.y
+                        ) {
+                            enemy.health--; // Decrease enemy health
+                            if (enemy.health <= 0) {
+                                bullets.splice(bulletIndex, 1);
+                                enemies.splice(enemyIndex, 1);
+                                score += enemy.points;
+                            }
+                        }
+                    });
+                }
+            });
+        }
+
+        // Function to update enemies
+        function updateEnemies() {
+            if (Math.random() < 0.015) { //add enemy \[°-°]/
+                generateEnemies();
+            }
+
+            // Check for collision with player
+            enemies.forEach((enemy, enemyIndex) => {
+                if (
+                    player.x < enemy.x + enemy.width &&
+                    player.x + player.width > enemy.x &&
+                    player.y < enemy.y + enemy.height &&
+                    player.y + player.height > enemy.y
+                ) {
+                    alert("Game Over !!" + "\n" + "[Ctrl + r]" + "\n" + "If wants to replay :)");
+                    clearRect();
+                }
+            });
+        }
+
+
+        function drawEnemyHitboxes() {
+            ctx.strokeStyle = "red";
+            enemies.forEach(enemy => {
+                ctx.strokeRect(enemy.x, enemy.y, enemy.width, enemy.height);
+            });
+        }
+
+        function drawPlayerHitbox() {
+            ctx.strokeStyle = "blue";
+            ctx.strokeRect(player.x, player.y, player.width, player.height);
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            drawPlayer();
+            drawEnemies();
+            drawBullets();
+            drawScore();
+            //drawPlayerHitbox(); //player hitbox
+            //drawEnemyHitboxes(); //enemy hitbox
+        }
+
+
+
+        function updateGameState() {
+            movePlayer();
+            moveEnemies();
+            moveBullets();
+            updateEnemies();
+        }
+
+        function gameLoop() {
+            updateGameState();
+            draw();
+            requestAnimationFrame(gameLoop);
+        }
+
+        //START\\
+        gameLoop();
+
+    </script>
+</body>
+
+</html>
